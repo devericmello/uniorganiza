@@ -1,0 +1,278 @@
+:root {
+  --cor-primaria: #2f5597;
+  --cor-primaria-escura: #1f3a6b;
+  --cor-fundo: #f4f6fa;
+  --cor-borda: #c9d3e0;
+  --cor-texto: #1f2a3a;
+  --cor-texto-suave: #5a6472;
+  --cor-urgente: #e74c3c;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+.app-header {
+  background-color: var(--cor-primaria);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.app-title {
+  font-size: 1.4rem;
+  margin: 0;
+  flex: 1;
+}
+
+.app-user {
+  font-size: 0.95rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Corpo: sidebar + conteúdo */
+.app-corpo {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #e8edf7;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: var(--cor-texto);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sidebar-link.ativo {
+  background-color: #d3ddf2;
+  font-weight: 600;
+}
+
+.app-conteudo {
+  flex: 1;
+  padding: 1.5rem 2rem;
+}
+
+.app-conteudo h2 {
+  margin-top: 0;
+}
+
+/* Cartões de atividade */
+.grade-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.cartao-atividade {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  border-left-width: 6px;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.cartao-atividade--concluida {
+  opacity: 0.6;
+}
+
+.cartao-atividade h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+.cartao-atividade__titulo {
+  margin: 0 0 0.4rem 0;
+}
+
+.cartao-atividade__prazo {
+  margin: 0 0 0.75rem 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+.etiqueta-urgente {
+  color: var(--cor-urgente);
+  font-weight: 600;
+}
+
+.botao-primario,
+.botao-secundario {
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.botao-primario {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+.botao-primario:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+.botao-secundario {
+  background-color: #eef1f7;
+  color: var(--cor-texto);
+}
+
+/* Formulários */
+.formulario {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0 1.5rem 0;
+  max-width: 420px;
+}
+
+.formulario fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.formulario label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario__linha {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.formulario__linha input {
+  flex: 1;
+}
+
+/* Listas simples */
+.lista-disciplinas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 420px;
+}
+
+.lista-disciplinas li {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  border-left-width: 6px;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+}
+
+.lista-atividades {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lista-atividades li {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  gap: 0.5rem;
+  background: white;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade: telas menores viram layout empilhado */
+@media (max-width: 720px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .app-corpo {
+    position: relative;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 10;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar--aberto {
+    transform: translateX(0);
+  }
+
+  .app-conteudo {
+    padding: 1rem;
+  }
+
+  .lista-atividades li {
+    grid-template-columns: 1fr;
+  }
+}
