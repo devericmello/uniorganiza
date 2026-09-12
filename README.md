@@ -2,7 +2,7 @@
 
 Aplicação web para ajudar estudantes universitários a organizar prazos de atividades acadêmicas de múltiplas disciplinas em um único painel.
 
-Projeto desenvolvido como parte do Programa de Extensão UFMS Digital (95DX7.200525), na disciplina de Projeto Integrador de Tecnologia da Informação I.
+Projeto desenvolvido como parte do Programa de Extensão UFMS Digital (95DX7.200525), na disciplina de Projeto Integrador de Tecnologia da Informação II.
 
 ## Sobre o projeto
 
